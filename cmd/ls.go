@@ -25,9 +25,9 @@ var lsCmd = &cobra.Command{
 		}
 
 		fmt.Print("You have following task: \n")
-		for index, task := range tasks {
+		for i, task := range tasks {
 			/* index + 1 as the index starts from zero and we want task to display from 1 */
-			fmt.Printf("%d. %s\n", index+1, task.Value)
+			fmt.Printf("%d. %s\n", i+1, task.Value)
 		}
 	},
 }

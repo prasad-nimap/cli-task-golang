@@ -11,7 +11,7 @@ var taskBucket = []byte("tasks")
 var db *bolt.DB
 
 type Task struct {
-	key   int
+	Key   int
 	Value string
 }
 
@@ -56,7 +56,7 @@ func AllTask() ([]Task, error) {
 		for k, v := c.First(); k != nil; k, v = c.Next() {
 			/* For every key value pair add to task */
 			task = append(task, Task{
-				key:   btio(k),
+				Key:   btio(k),
 				Value: string(v),
 			})
 		}
